@@ -97,8 +97,9 @@ export const metadata: Metadata = {
   },
   category: "Office Equipment & Electronics",
   verification: {
-    google: "google-site-verification-placeholder",
+    google: "google-site-verification-ViHbpEh7H-Rb9BY4KZctzr3eeBOpONHExBBe9eOPPY4",
   },
+ 
 };
 
 const jsonLd = {
