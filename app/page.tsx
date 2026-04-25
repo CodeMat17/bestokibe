@@ -464,7 +464,7 @@ export default function HomePage() {
                   </div>
                   <div className='relative h-36 rounded-2xl overflow-hidden shadow-lg'>
                     <Image
-                      src='/products/standing_printer_2.jpeg'
+                      src='/products/standing_printer_2.jpg'
                       alt='Professional copier at DE-BEST OKIBE office equipment store'
                       fill
                       className='object-cover'
@@ -475,7 +475,7 @@ export default function HomePage() {
                 <div className='space-y-4 mt-8'>
                   <div className='relative h-36 rounded-2xl overflow-hidden shadow-lg'>
                     <Image
-                      src='/products/standing_printer.jpeg'
+                      src='/products/standing_printer.jpg'
                       alt='All-in-one printer at DE-BEST OKIBE Alaba International Market'
                       fill
                       className='object-cover'
@@ -484,7 +484,7 @@ export default function HomePage() {
                   </div>
                   <div className='relative h-56 rounded-2xl overflow-hidden shadow-lg'>
                     <Image
-                      src='/products/printers.jpeg'
+                      src='/products/printers.jpg'
                       alt='Wide range of printers at DE-BEST OKIBE, Ojo Lagos Nigeria'
                       fill
                       className='object-cover'
