@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx shadcn@latest add sheet --yes)",
+      "Bash(npx eslint *)",
+      "PowerShell(yarn dev)",
+      "PowerShell(Stop-Process -Id 5652 -Force)",
+      "PowerShell(Stop-Process -Force)"
+    ]
+  }
+}

@@ -67,14 +67,14 @@ function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string })
 
 /* ─── Data ─── */
 const products = [
-  { name: "Laser Pro Printer", category: "Laser Printers", desc: "High-speed monochrome laser printing — ideal for heavy-duty office workloads.", image: "/products/laser_pro.jpg", tag: "Best Seller" },
-  { name: "Color LaserJet", category: "Color Printers", desc: "Vibrant full-color prints with professional-grade quality for presentations.", image: "/products/color_laserjet.jpg", tag: "Popular" },
-  { name: "Business Laptop", category: "Laptops", desc: "Powerful, lightweight laptops for productivity — perfectly suited for business.", image: "/products/laptop.jpg", tag: "New Arrival" },
-  { name: "Transformer Laptop", category: "2-in-1 Laptops", desc: "Versatile 2-in-1 convertible laptop — tablet and laptop in one sleek device.", image: "/products/transformer_laptop.jpg", tag: "Trending" },
-  { name: "Standing Printer", category: "All-in-One Printers", desc: "All-in-one printer with scanning, copying and fax capabilities built in.", image: "/products/standing_printer.jpg", tag: "Top Pick" },
-  { name: "Office Printer Suite", category: "Multifunction Printers", desc: "Complete office printing solution — scan, copy, print and email seamlessly.", image: "/products/printers.jpg", tag: "Value" },
-  { name: "Compact Printer", category: "Inkjet Printers", desc: "Compact, reliable inkjet printer perfect for small offices and home use.", image: "/products/printer.jpg", tag: "Affordable" },
-  { name: "Professional Copier", category: "Copier Machines", desc: "Industrial-grade copier built for high-volume production in any office.", image: "/products/standing_printer_2.jpg", tag: "Heavy Duty" },
+  { name: "Laser Pro Printer", category: "Laser Printers", desc: "High-speed monochrome laser printing — ideal for heavy-duty office workloads.", image: "/products/laser_pro.jpeg", tag: "Best Seller" },
+  { name: "Color LaserJet", category: "Color Printers", desc: "Vibrant full-color prints with professional-grade quality for presentations.", image: "/products/color_laserjet.jpeg", tag: "Popular" },
+  { name: "Business Laptop", category: "Laptops", desc: "Powerful, lightweight laptops for productivity — perfectly suited for business.", image: "/products/laptop.jpeg", tag: "New Arrival" },
+  { name: "Transformer Laptop", category: "2-in-1 Laptops", desc: "Versatile 2-in-1 convertible laptop — tablet and laptop in one sleek device.", image: "/products/transformer_laptop.jpeg", tag: "Trending" },
+  { name: "Standing Printer", category: "All-in-One Printers", desc: "All-in-one printer with scanning, copying and fax capabilities built in.", image: "/products/standing_printer.jpeg", tag: "Top Pick" },
+  { name: "Office Printer Suite", category: "Multifunction Printers", desc: "Complete office printing solution — scan, copy, print and email seamlessly.", image: "/products/printers.jpeg", tag: "Value" },
+  { name: "Compact Printer", category: "Inkjet Printers", desc: "Compact, reliable inkjet printer perfect for small offices and home use.", image: "/products/printer.jpeg", tag: "Affordable" },
+  { name: "Professional Copier", category: "Copier Machines", desc: "Industrial-grade copier built for high-volume production in any office.", image: "/products/standing_printer_2.jpeg", tag: "Heavy Duty" },
 ];
 
 const features = [
@@ -208,14 +208,14 @@ export default function HomePage() {
             <div className='hidden lg:block relative'>
               <div className='grid grid-cols-2 gap-4'>
                 {[
-                  { src: "/products/laser_pro.jpg", label: "Laser Printers" },
-                  { src: "/products/laptop.jpg", label: "Laptops" },
+                  { src: "/products/laser_pro.jpeg", label: "Laser Printers" },
+                  { src: "/products/laptop.jpeg", label: "Laptops" },
                   {
-                    src: "/products/printer.jpg",
+                    src: "/products/color_laserjet.jpeg",
                     label: "Color Copiers",
                   },
                   {
-                    src: "/products/transformer_laptop.jpg",
+                    src: "/products/transformer_laptop.jpeg",
                     label: "2-in-1 Devices",
                   },
                 ].map(({ src, label }) => (
@@ -245,7 +245,6 @@ export default function HomePage() {
                   alt='DE-BEST OKIBE'
                   width={32}
                   height={32}
-                  style={{ width: 32, height: "auto" }}
                   className='object-contain'
                 />
                 <div>
@@ -356,41 +355,42 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {products.map((p) => (
               <article
                 key={p.name}
-                className='product-card group flex flex-col bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300'>
-
-                {/* Image — aspect-square matches 600×600 source exactly, object-cover shows full image */}
-                <div className='relative aspect-square overflow-hidden bg-gray-50 dark:bg-slate-700'>
+                className='product-card group relative bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300'>
+                <span
+                  className='absolute top-3 left-3 z-10 text-xs font-bold px-2.5 py-1 rounded-full'
+                  style={{ backgroundColor: "#D4A017", color: "#0D1B3E" }}>
+                  {p.tag}
+                </span>
+                <div className='relative h-56 overflow-hidden bg-gray-50 dark:bg-slate-700'>
                   <Image
                     src={p.image}
                     alt={`${p.name} — ${p.category} at DE-BEST OKIBE, Alaba International Market Lagos Nigeria`}
                     fill
-                    className='product-image object-cover transition-transform duration-500 group-hover:scale-105'
+                    className='product-image object-cover object-top transition-transform duration-500'
                     sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
                   />
-                  {/* Tag badge */}
-                  <span
-                    className='absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full shadow-md'
-                    style={{ backgroundColor: "#D4A017", color: "#0D1B3E" }}>
-                    {p.tag}
-                  </span>
-                  {/* Hover overlay */}
-                  <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity' />
                 </div>
-
-                {/* Content */}
-                <div className='flex flex-col flex-1 p-5'>
-                  <p className='text-xs font-bold uppercase tracking-widest mb-1' style={{ color: "#D4A017" }}>
+                <div className='p-5'>
+                  <p
+                    className='text-xs font-semibold uppercase tracking-wider mb-1'
+                    style={{ color: "#D4A017" }}>
                     {p.category}
                   </p>
-                  <h3 className='font-bold text-base mb-2 navy-text leading-snug'>{p.name}</h3>
-                  <p className='text-sm leading-relaxed body-text flex-1 mb-4'>{p.desc}</p>
+                  <h3 className='font-bold text-base mb-2 navy-text'>
+                    {p.name}
+                  </h3>
+                  <p className='text-sm leading-relaxed mb-4 body-text'>
+                    {p.desc}
+                  </p>
                   <a href='tel:+2348066538558'>
                     <button className='w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold enquire-btn'>
-                      <Phone className='size-3.5' />Enquire Now
+                      <Phone className='size-3.5' />
+                      Enquire Now
                     </button>
                   </a>
                 </div>
@@ -779,8 +779,8 @@ export default function HomePage() {
               
 
               <a href="#home" className="flex items-center gap-2 group" aria-label="DE-BEST OKIBE OFFICE EQUIPMENT">
-                <Image src="/logo.png" alt="DE-BEST OKIBE logo icon" width={40} height={40} style={{ width: 40, height: "auto" }} className="object-contain brightness-0 invert group-hover:scale-105 transition-transform" />
-                <Image src="/logo_text.png" alt="DE-BEST OKIBE Office Equipments" width={90} height={36} style={{ width: 90, height: "auto" }} className="object-contain brightness-0 invert" />
+                <Image src="/logo.png" alt="DE-BEST OKIBE logo icon" width={40} height={40} className="object-contain brightness-0 invert group-hover:scale-105 transition-transform" />
+                <Image src="/logo_text.png" alt="DE-BEST OKIBE Office Equipments" width={90} height={36} className="object-contain brightness-0 invert" />
               </a>
 
               <p className='text-gray-400 text-sm leading-relaxed'>
@@ -915,14 +915,10 @@ export default function HomePage() {
           </div>
 
           <div className='border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4'>
-            <div className="text-center space-y-1">
-              <p className='text-gray-500 text-sm'>
-                &copy; {new Date().getFullYear()} DE-BEST OKIBE OFFICE EQUIPMENT. All rights reserved.
-              </p>
-              <p className='text-gray-600 text-xs'>
-                CAC Reg. No: <span className="font-semibold" style={{ color: "#D4A017" }}>3789654</span>
-              </p>
-            </div>
+            <p className='text-gray-500 text-sm text-center'>
+              &copy; {new Date().getFullYear()} DE-BEST OKIBE OFFICE EQUIPMENT.
+              All rights reserved.
+            </p>
             <p className='text-gray-600 text-xs text-center'>
               Alaba International Market, Ojo, Lagos, Nigeria &nbsp;|&nbsp;
               <a
