@@ -484,7 +484,7 @@ export default function HomePage() {
                   </div>
                   <div className='relative h-56 rounded-2xl overflow-hidden shadow-lg'>
                     <Image
-                      src='/products/printers.jpg'
+                      src='/products/transformer_laptop.jpg'
                       alt='Wide range of printers at DE-BEST OKIBE, Ojo Lagos Nigeria'
                       fill
                       className='object-cover'
