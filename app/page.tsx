@@ -29,7 +29,7 @@ import {
 import Navbar from "@/components/Navbar";
 
 /* ─── Intersection Observer hook ─── */
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.10) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {

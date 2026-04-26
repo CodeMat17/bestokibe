@@ -99,10 +99,10 @@ export default function Navbar() {
               <Image
                 src="/logo_text.png"
                 alt="DE-BEST OKIBE Office Equipments"
-                width={110}
+                width={80}
                 height={40}
-                style={{ width: 110, height: "auto" }}
-                className="hidden sm:block object-contain"
+                style={{ width: 80, height: "auto" }}
+                className=" object-contain"
                 priority
               />
             </Link>
