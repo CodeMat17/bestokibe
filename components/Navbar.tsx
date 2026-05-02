@@ -129,7 +129,7 @@ export default function Navbar() {
               <ThemeToggle />
               <a href="tel:+2348066538558">
                 <Button
-                  size="sm"
+                 
                   className="gap-2 font-semibold shadow-md hover:shadow-lg transition-all py-2"
                   style={{ backgroundColor: "#D4A017", color: "#0D1B3E" }}
                 >

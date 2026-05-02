@@ -255,9 +255,9 @@ export default function HomePage() {
         />
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full'>
-          <div className='grid lg:grid-cols-2 gap-12 items-center'>
+          <div className='grid lg:grid-cols-3 gap-12 items-center'>
             {/* Left */}
-            <div className='space-y-8'>
+            <div className='space-y-8 lg:col-span-2'>
               <div className='inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 backdrop-blur-sm'>
                 <span
                   className='w-2 h-2 rounded-full animate-pulse'
@@ -268,14 +268,14 @@ export default function HomePage() {
                 </span>
               </div>
               <div className='space-y-4'>
-                <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'>
-                  Equip Your Office
-                  <span className='block shimmer-text mt-1'>with the Best</span>
-                  <span className='block text-white/90 mt-1'>in Nigeria</span>
+                <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white'>
+                  Power Your Office.
+                  <span className='block shimmer-text mt-1'>Outperform the Rest.</span>
+                  <span className='block text-white/90 mt-1'>With De-Best.</span>
                 </h1>
                 <p className='text-lg text-gray-300 leading-relaxed max-w-xl'>
                   Premium printers, copiers, laptops, desktops &amp; accessories
-                  — sourced from top global brands. Competitive prices, genuine
+                  - sourced from top global brands. Competitive prices, genuine
                   products, expert support from Alaba International Market,
                   Lagos.
                 </p>
@@ -284,7 +284,6 @@ export default function HomePage() {
                 {[
                   "Genuine Products",
                   "Warranty Included",
-                  "After-Sales Support",
                   "Nationwide Delivery",
                 ].map((t) => (
                   <span
@@ -295,19 +294,19 @@ export default function HomePage() {
                   </span>
                 ))}
               </div>
-              <div className='flex flex-col sm:flex-row gap-4'>
+              <div className='flex gap-4'>
                 <a href='#products'>
                   <button
-                    className='group inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 shadow-lg pulse-glow'
+                    className='group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-base transition-all hover:scale-105 shadow-lg pulse-glow'
                     style={{ backgroundColor: "#D4A017", color: "#0D1B3E" }}>
                     View Products{" "}
                     <ArrowRight className='size-4 group-hover:translate-x-1 transition-transform' />
                   </button>
                 </a>
                 <a href='tel:+2348066538558'>
-                  <button className='inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-base text-white border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all backdrop-blur-sm'>
+                  <button className='inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-base text-white border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all backdrop-blur-sm'>
                     <Phone className='size-4' />
-                    Call 08066538558
+                    Call Us
                   </button>
                 </a>
               </div>
@@ -315,7 +314,7 @@ export default function HomePage() {
 
             {/* Right: image mosaic */}
             <div className='hidden lg:block relative'>
-              <div className='grid grid-cols-2 gap-4'>
+              <div className='grid grid-cols-2 gap-1.5 max-w-xs mx-auto'>
                 {[
                   { src: "/products/laser_pro.jpg", label: "Laser Printers" },
                   { src: "/products/laptop.jpg", label: "Laptops" },
@@ -330,25 +329,25 @@ export default function HomePage() {
                 ].map(({ src, label }) => (
                   <div
                     key={src}
-                    className='glass-card rounded-2xl overflow-hidden group cursor-pointer'>
-                    <div className='relative aspect-square overflow-hidden'>
+                    className='glass-card rounded-xl overflow-hidden group cursor-pointer'>
+                    <div className='relative h-36 w-full overflow-hidden'>
                       <Image
                         src={src}
                         alt={`${label} at DE-BEST OKIBE, Alaba Market Lagos`}
                         fill
                         className='object-cover transition-transform duration-500 group-hover:scale-110'
-                        sizes='200px'
+                        sizes='150px'
                         priority
                       />
                       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent' />
-                      <p className='absolute bottom-3 left-3 text-white text-xs font-semibold'>
+                      <p className='absolute bottom-2 left-2 text-white text-xs font-semibold'>
                         {label}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className='absolute -top-4 -right-4 float-card rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 float-animation'>
+              <div className='absolute -top-4 -right-8 float-card rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 float-animation'>
                 <Image
                   src='/logo.png'
                   alt='DE-BEST OKIBE'
@@ -365,7 +364,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div
-                className='absolute -bottom-4 -left-4 float-card rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 float-animation'
+                className='absolute -bottom-4 -left-8 float-card rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 float-animation'
                 style={{ animationDelay: "1.5s" }}>
                 <div
                   className='w-8 h-8 rounded-lg flex items-center justify-center'
@@ -457,7 +456,7 @@ export default function HomePage() {
               Our Products
             </span>
             <h2 className='text-3xl sm:text-4xl font-bold mb-4 navy-text'>
-              Premium Office Equipment
+             Selected Premium Office Equipment
             </h2>
             <p className='max-w-2xl mx-auto text-lg body-text'>
               Carefully sourced from the world&apos;s leading brands — ensuring
@@ -544,7 +543,7 @@ export default function HomePage() {
                           className='w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white transition-all hover:scale-[1.02] shadow-md'
                           style={{ backgroundColor: "#0D1B3E" }}>
                           <Phone className='size-4' />
-                          Call Now
+                          Call to Buy
                         </button>
                       </a>
                       <a
@@ -556,7 +555,7 @@ export default function HomePage() {
                           className='w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white transition-all hover:scale-[1.02] shadow-md'
                           style={{ backgroundColor: "#25D366" }}>
                           <MessageCircle className='size-4' />
-                          Chat Now
+                          Chat with us
                         </button>
                       </a>
                     </div>
@@ -1122,13 +1121,29 @@ export default function HomePage() {
 
       {/* Floating WhatsApp button */}
       <a
-        href='https://wa.me/2348066538558'
+        href='https://wa.me/2348066538558?text=DE-BEST%20OKIBE%20OFFICE%20EQUIPMENT%2C%20I%20want%20to%20make%20some%20enquires...'
         target='_blank'
         rel='noopener noreferrer'
         className='fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform pulse-glow'
         style={{ backgroundColor: "#25D366" }}
         aria-label='Chat with DE-BEST OKIBE on WhatsApp'>
-        <MessageCircle className='size-7 text-white fill-white' />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 48 48'
+          className='w-8 h-8'>
+          <path
+            fill='#fff'
+            d='M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z'
+          />
+          <path
+            fill='#25D366'
+            d='M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.3.9 6.4 2.5 9.1L7 41l8.1-2c2.6 1.4 5.5 2.2 8.9 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z'
+          />
+          <path
+            fill='#fff'
+            d='M33.7 28.3c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2s-1.2 1.5-1.4 1.8c-.3.3-.5.4-1 .1s-1.9-.7-3.6-2.2c-1.3-1.2-2.2-2.6-2.5-3.1s0-.7.2-1c.2-.2.5-.5.7-.8.2-.2.3-.5.4-.8.1-.3.1-.6 0-.8s-1-2.4-1.4-3.3c-.4-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.5-.4.5-1.5 1.5-1.5 3.6s1.6 4.2 1.8 4.5c.2.3 3.1 4.7 7.5 6.6 1 .5 1.9.7 2.5.9 1.1.3 2 .3 2.8.2.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.2-.4-.3-.8-.5z'
+          />
+        </svg>
       </a>
     </div>
   );
